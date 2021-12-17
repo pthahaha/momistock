@@ -15,8 +15,9 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    implementation "org.springframework.boot:spring-boot-devtools"
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.1.7.RELEASE'
-
+    implementation group: 'com.h2database', name: 'h2', scope: 'runtime', version: '1.4.200'
     testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
