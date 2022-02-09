@@ -5,16 +5,18 @@ import kr.pe.acet.controller.web.dto.PostsResponseDto;
 import kr.pe.acet.controller.web.dto.PostsSaveRequestDto;
 import kr.pe.acet.controller.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
-    private final PostsService postsService;
+    @Autowired PostsService postsService;
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto){
-        return postsService.save(requestDto);
+        Long a =  postsService.save(requestDto);
+        return a;
     }
 
     @PutMapping("/api/v1/posts/{id}")
