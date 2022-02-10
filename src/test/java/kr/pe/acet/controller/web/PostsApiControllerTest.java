@@ -49,8 +49,8 @@ public class PostsApiControllerTest {
     @WithMockUser(roles="USER")
     public void Posts_등록된다() throws Exception {
         // given
-        String title = "title";
-        String content = "content";
+        String title = "테스트 게시글";
+        String content = "테스트 본문";
         PostsSaveRequestDto requestDto = PostsSaveRequestDto.builder()
                 .title(title)
                 .content(content)
@@ -80,8 +80,8 @@ public class PostsApiControllerTest {
                 .build());
 
         Long updateId = savedPosts.getId();
-        String expectedTitle = "title";
-        String expectedContent = "content";
+        String expectedTitle = "테스트 게시글";
+        String expectedContent = "테스트 본문";
 
         PostsUpdateRequestDto requestDto = PostsUpdateRequestDto.builder().title(expectedTitle).content(expectedContent).build();
 
