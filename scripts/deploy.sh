@@ -9,7 +9,7 @@ echo "> Git Pull"
 git pull
 
 echo "> project build start!"
-./gradlew build
+./gradlew assemble
 
 echo "> move service dir "
 cd $REPOSITORY
