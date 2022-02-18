@@ -19,4 +19,3 @@ notifications:
   email:
     recipients:
       - sshaple@naver.com
-    on_success: never
