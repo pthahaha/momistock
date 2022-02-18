@@ -18,5 +18,5 @@ script: "./gradlew clean assemble"
 notifications:
   email:
     recipients:
-      - acetaeha@gmail.com
+      - sshaple@naver.com
     on_success: never
