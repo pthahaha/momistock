@@ -19,3 +19,5 @@ notifications:
   email:
     recipients:
       - sshaple@naver.com
+      - pthahaha10@naver.com
+    on_success: never
