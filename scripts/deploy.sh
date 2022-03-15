@@ -18,7 +18,7 @@ echo "> Build 파일 복사"
 cp $REPOSITORY/$PROJECT_NAME/build/libs/*.jar $REPOSITORY/
 
 echo "> 현재 구동중인 애플리케이션 pid 확인"
-CURRENT_PID=$(pgrep -fl momistock | grep jar | awk '{print $1}')
+CURRENT_PID=$(pgrep -f ${PROJECT_NAME})
 
 echo "현재 구동중인 어플리케이션 pid: $CURRENT_PID"
 
