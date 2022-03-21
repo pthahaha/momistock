@@ -7,6 +7,18 @@ source ${ABSDIR}/profile.sh
 REPOSITORY=/home/ec2-user/service
 PROJECT_NAME=momistock
 
+#망할 Travis CI..
+cd $REPOSITORY/$PROJECT_NAME/
+
+echo "> Git Pull"
+git pull
+
+echo "> project build start!"
+./gradlew assemble
+
+echo "> move service dir "
+cd $REPOSITORY
+
 echo "> Build 파일 복사"
 echo "> cp $REPOSITORY/momistock/build/libs/*.jar $REPOSITORY/"
 
